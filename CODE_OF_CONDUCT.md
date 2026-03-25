@@ -62,7 +62,7 @@ Instances of abusive, harassing, or otherwise unacceptable behavior may be
 reported to the community leaders responsible for enforcement at
 
 | Method | Example | Best for |
-|---|---|---|
+| --- | --- | --- |
 | Email | `reported at **michal@michaloleszek.com**` | Most common, private |
 | GitHub Issues | `reported by opening an issue at [Issues](https://github.com/solairen/pihole-backup/issues)` | Public, transparent |
 | Multiple | Email + Issues combined | Gives people a choice |

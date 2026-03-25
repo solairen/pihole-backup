@@ -33,46 +33,55 @@ Include minimal steps so reviewers can reproduce the behavior. Provide commands 
 dotnet build src/pihole-backup/pihole-backup.csproj
 ```
 
-2. Create a local `.env` (or export env vars) with only non-sensitive example values. Omit secrets if posting publicly. Example:
+1. Create a local `.env` (or export env vars) with only non-sensitive example values. Omit secrets if posting publicly. Example:
 
-```text
-PIHOLE_URL=https://pihole.local
-PIHOLE_PASSWORD=secret
-PROVIDER=S3
-S3_BUCKET=example-bucket
-BACKUP_CRON=""
-```
+    ```text
+    PIHOLE_URL=https://pihole.local
+    PIHOLE_PASSWORD=secret
+    PROVIDER=S3
+    S3_BUCKET=example-bucket
+    BACKUP_CRON=""
+    ```
 
-3. Run locally:
+2. Run locally:
 
-```bash
-dotnet run --project src/pihole-backup/pihole-backup.csproj
-```
+    ```bash
+    dotnet run --project src/pihole-backup/pihole-backup.csproj
+    ```
 
-4. Or build the Docker image and run (recommended for environment parity):
+3. Or build the Docker image and run (recommended for environment parity):
 
-```bash
-docker build -f docker/Dockerfile -t local/pihole-backup:dev .
-docker run --rm --env-file .env local/pihole-backup:dev
-```
+    ```bash
+    docker build -f docker/Dockerfile -t local/pihole-backup:dev .
+    docker run --rm --env-file .env local/pihole-backup:dev
+    ```
 
 Notes:
-- For storage testing choose one backend: S3-compatible (AWS/Linode/Garage/Other) or Azure Blob. If testing Azure, ensure `AZURE_*` env vars are set. If testing S3-compatible, set `S3_ACCESS_KEY`, `S3_SECRET_KEY`, `S3_BUCKET`, and `S3_ENDPOINT` if using a non-AWS provider.
+
+- For storage testing choose one backend: S3-compatible (AWS/Linode/Garage/Other) or Azure Blob.
+  If testing Azure, ensure `AZURE_*` env vars are set. If testing S3-compatible, set `S3_ACCESS_KEY`,
+  `S3_SECRET_KEY`, `S3_BUCKET`, and `S3_ENDPOINT` if using a non-AWS provider.
 
 ## CI / Expected checks
+
 - CI should run `dotnet build` and any unit tests (none currently). Verify Docker build if a workflow exists.
 
 ## Security considerations
+
 - Do not commit secrets. Use CI secrets or runtime-only environment variables.
+
 - If a change affects credentials handling, document how secrets are stored and rotated.
 
 ## Backwards compatibility / Migration
+
 - If this PR introduces breaking behavior, describe migration steps and list affected consumers.
 
 ## Release notes / Changelog
+
 - Add a short entry under CHANGELOG.md for user-visible changes (bugfix, feature, breaking change).
 
 ## Additional context / Screenshots
+
 - Add any logs, screenshots, or other information needed to review this change.
 
 ---
@@ -82,4 +91,3 @@ Small PR checklist for contributors:
 - [ ] Commit messages are clear and atomic
 - [ ] PR description explains intent and testing steps
 - [ ] Assign appropriate reviewers
-

@@ -7,8 +7,9 @@ LABEL org.opencontainers.image.licenses=GPL
 LABEL release=development
 
 # Variables
-ARG username=moleszek
+ARG username=ubuntu
 ARG path=/development
+ARG hadolint_version=2.12.0
 
 # Environment
 ENV USER=${username}
@@ -24,12 +25,14 @@ RUN mkdir "${path}" \
   && apt-get --no-install-recommends install -y \
     openssh-client \
     gnupg \
+    python3-dev \
+    python3-pip \
+  && pip3 install pre-commit --break-system-packages \
+  && curl -L -o /tmp/hadolint https://github.com/hadolint/hadolint/releases/download/v${hadolint_version}/hadolint-Linux-x86_64 \
+  && mv /tmp/hadolint /usr/local/bin/hadolint \
+  && chmod +x /usr/local/bin/hadolint \
   && apt-get autoremove -y\
   && apt-get clean \
-  # Add non root user
-  && useradd -ms /bin/bash "${username}" \
-  && chown -R "${username}":"${username}" "${path}" \
-  && chmod -R 755 "${path}" \
   # Install starship
   && curl -o /tmp/install.sh https://starship.rs/install.sh \
   && sh /tmp/install.sh -y \

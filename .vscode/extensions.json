@@ -20,6 +20,7 @@
     "docsmsft.docs-markdown",
     "eamodio.gitlens",
     "VisualStudioExptTeam.vscodeintellicode",
-    "ms-vscode.powershell"
+    "ms-vscode.powershell",
+    "Anthropic.claude-code"
   ]
 }

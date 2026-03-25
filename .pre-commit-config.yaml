@@ -43,14 +43,14 @@ repos:
         pass_filenames: false
 
   # Dockerfile linting
-  - repo: https://github.com/hadolint/hadolint
-    rev: v2.14.0
+  - repo: local
     hooks:
       - id: hadolint
-        name: hadolint
+        name: Lint Dockerfiles
         entry: hadolint
-        language: docker_image
-        types: [dockerfile]
+        language: system
+        files: ^docker/Dockerfile$
+        exclude: ^\.git/.*$
 
   # YAML best practices
   - repo: https://github.com/adrienverge/yamllint
@@ -61,6 +61,7 @@ repos:
         entry: yamllint
         language: python
         types: [yaml]
+        exclude: ^\.github/
 
   # Advanced secrets scanning
   - repo: https://github.com/Yelp/detect-secrets

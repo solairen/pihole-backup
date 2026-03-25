@@ -1,4 +1,4 @@
-﻿using pihole_backup.Services;
+using pihole_backup.Services;
 using Serilog;
 using Cronos;
 using pihole_backup.Providers;

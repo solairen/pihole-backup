@@ -1,15 +1,15 @@
 {
   "name": "pihole backup",
   "dockerFile": "../docker/Dockerfile-dev",
-  "postCreateCommand": "echo DONE!",
+  "postCreateCommand": "echo DONE! && export PATH=$PATH:/home/ubuntu/.local/bin",
   "workspaceMount": "source=${localWorkspaceFolder},target=/development,type=bind",
   "workspaceFolder": "/development",
   "mounts": [
-    "source=${localEnv:HOME}/.ssh,target=/home/moleszek/.ssh,type=bind,consistency=cached",
-    "source=${localEnv:HOME}/.gnupg,target=/home/moleszek/.gnupg,type=bind,consistency=cached"
+    "source=${localEnv:HOME}/.ssh,target=/home/ubuntu/.ssh,type=bind,consistency=cached",
+    "source=${localEnv:HOME}/.gnupg,target=/home/ubuntu/.gnupg,type=bind,consistency=cached"
   ],
-  "remoteUser": "moleszek",
-  "containerUser": "moleszek",
+  "remoteUser": "ubuntu",
+  "containerUser": "ubuntu",
   "remoteEnv": {
     "AZURE_TELEMETRY_DISABLED": "true",
     "PIHOLE_PASSWORD": "${localEnv:PIHOLE_PASSWORD}",
@@ -51,7 +51,8 @@
         "docsmsft.docs-markdown",
         "eamodio.gitlens",
         "VisualStudioExptTeam.vscodeintellicode",
-        "ms-vscode.powershell"
+        "ms-vscode.powershell",
+        "Anthropic.claude-code"
       ]
     }
   }
