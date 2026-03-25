@@ -1,0 +1,50 @@
+FROM mcr.microsoft.com/dotnet/sdk:10.0
+
+LABEL org.opencontainers.image.source="https://github.com/solairen/pihole-backup"
+LABEL org.opencontainers.image.description="Create PiHole backup and send it to S3 Compatible object or Azure Blob Storage"
+LABEL org.opencontainers.image.authors="Michał Oleszek michal@michaloleszek.com"
+LABEL org.opencontainers.image.licenses=GPL
+LABEL release=development
+
+# Variables
+ARG username=moleszek
+ARG path=/development
+
+# Environment
+ENV USER=${username}
+ENV USERNAME=${username}
+
+# Use user root
+USER root
+
+# Create folder
+RUN mkdir "${path}" \
+  # Update packages and install dependencies
+  && apt-get update && apt-get upgrade -y \
+  && apt-get --no-install-recommends install -y \
+    openssh-client \
+    gnupg \
+  && apt-get autoremove -y\
+  && apt-get clean \
+  # Add non root user
+  && useradd -ms /bin/bash "${username}" \
+  && chown -R "${username}":"${username}" "${path}" \
+  && chmod -R 755 "${path}" \
+  # Install starship
+  && curl -o /tmp/install.sh https://starship.rs/install.sh \
+  && sh /tmp/install.sh -y \
+  && mkdir /home/${username}/.config \
+  && starship preset no-empty-icons -o /home/${username}/.config/starship.toml \
+  && echo "[terraform]" >> /home/${username}/.config/starship.toml \
+  && echo "format = '([(\$version | workspace: \$workspace)](\$style))'" >> /home/${username}/.config/starship.toml \
+  && echo "eval '$(starship init bash)'" >> /home/${username}/.bashrc \
+  # Cleanup
+  && rm /tmp/install.sh
+
+# Use non root user
+USER ${username}
+
+# Workdir
+WORKDIR ${path}
+
+ENTRYPOINT ["bash"]

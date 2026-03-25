@@ -1,0 +1,27 @@
+---
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    assignees:
+      - solairen
+  - package-ecosystem: nuget
+    directory: "/src/pihole-backup"
+    schedule:
+      interval: "daily"
+    assignees:
+      - solairen
+  - package-ecosystem: devcontainers
+    directory: "/"
+    schedule:
+      interval: "daily"
+    assignees:
+      - solairen
+  - package-ecosystem: dotnet-sdk
+    directory: "/"
+    schedule:
+      interval: "daily"
+    assignees:
+        - solairen

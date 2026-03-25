@@ -1,0 +1,7 @@
+services:
+  pihole-backup:
+    container_name: pihole-backup
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    env_file: .env

@@ -1,0 +1,5 @@
+services:
+  pihole-backup:
+    container_name: pihole-backup
+    image: ghcr.io/solairen/pihole-backup:latest
+    env_file: .env
