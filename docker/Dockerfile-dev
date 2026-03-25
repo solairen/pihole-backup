@@ -1,0 +1,53 @@
+FROM mcr.microsoft.com/dotnet/sdk:10.0
+
+LABEL org.opencontainers.image.source="https://github.com/solairen/pihole-backup"
+LABEL org.opencontainers.image.description="Create PiHole backup and send it to S3 Compatible object or Azure Blob Storage"
+LABEL org.opencontainers.image.authors="Michał Oleszek michal@michaloleszek.com"
+LABEL org.opencontainers.image.licenses=GPL
+LABEL release=development
+
+# Variables
+ARG username=ubuntu
+ARG path=/development
+ARG hadolint_version=2.12.0
+
+# Environment
+ENV USER=${username}
+ENV USERNAME=${username}
+
+# Use user root
+USER root
+
+# Create folder
+RUN mkdir "${path}" \
+  # Update packages and install dependencies
+  && apt-get update && apt-get upgrade -y \
+  && apt-get --no-install-recommends install -y \
+    openssh-client \
+    gnupg \
+    python3-dev \
+    python3-pip \
+  && pip3 install pre-commit --break-system-packages \
+  && curl -L -o /tmp/hadolint https://github.com/hadolint/hadolint/releases/download/v${hadolint_version}/hadolint-Linux-x86_64 \
+  && mv /tmp/hadolint /usr/local/bin/hadolint \
+  && chmod +x /usr/local/bin/hadolint \
+  && apt-get autoremove -y\
+  && apt-get clean \
+  # Install starship
+  && curl -o /tmp/install.sh https://starship.rs/install.sh \
+  && sh /tmp/install.sh -y \
+  && mkdir /home/${username}/.config \
+  && starship preset no-empty-icons -o /home/${username}/.config/starship.toml \
+  && echo "[terraform]" >> /home/${username}/.config/starship.toml \
+  && echo "format = '([(\$version | workspace: \$workspace)](\$style))'" >> /home/${username}/.config/starship.toml \
+  && echo "eval '$(starship init bash)'" >> /home/${username}/.bashrc \
+  # Cleanup
+  && rm /tmp/install.sh
+
+# Use non root user
+USER ${username}
+
+# Workdir
+WORKDIR ${path}
+
+ENTRYPOINT ["bash"]

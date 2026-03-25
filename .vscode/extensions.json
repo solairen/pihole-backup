@@ -1,0 +1,26 @@
+{
+  "recommendations": [
+    "GitHub.copilot",
+    "GitHub.copilot-chat",
+    "GitHub.vscode-pull-request-github",
+    "GitHub.remotehub",
+    "GitHub.vscode-github-actions",
+    "ms-dotnettools.csharp",
+    "ms-dotnettools.csdevkit",
+    "ms-dotnettools.vscode-dotnet-runtime",
+    "formulahendry.dotnet-test-explorer",
+    "ms-dotnettools.vscode-dotnet-pack",
+    "adrianwilczynski.namespace",
+    "jesschadwick.nuget-reverse-package-search",
+    "josefpihrt-vscode.roslynator",
+    "ybaumes.highlight-trailing-white-spaces",
+    "Gruntfuggly.todo-tree",
+    "aaron-bond.better-comments",
+    "docsmsft.docs-preview",
+    "docsmsft.docs-markdown",
+    "eamodio.gitlens",
+    "VisualStudioExptTeam.vscodeintellicode",
+    "ms-vscode.powershell",
+    "Anthropic.claude-code"
+  ]
+}
