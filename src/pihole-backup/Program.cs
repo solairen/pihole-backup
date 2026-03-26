@@ -107,7 +107,7 @@ namespace pihole_backup
         private static async Task RunAsync(DateTimeOffset? scheduled = null)
         {
             string date = (scheduled ?? DateTimeOffset.Now).ToString("yyyy-MM-dd_HH-mm");
-            string filePath = $"teleporter-{date}.tar.gz";
+            string filePath = $"/tmp/teleporter-{date}.tar.gz";
             string key = $"pihole/teleporter-{date}.tar.gz";
 
             PiHoleService pihole = new();
