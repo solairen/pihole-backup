@@ -21,3 +21,13 @@
 
 
 **Full Changelog**: https://github.com/solairen/pihole-backup/compare/1.0.0...1.0.1
+
+## 1.1.0
+
+## What's Changed
+* Bump Azure.Identity from 1.20.0 to 1.21.0 by @dependabot[bot] in https://github.com/solairen/pihole-backup/pull/13
+* Bump AWSSDK.S3 from 4.0.21 to 4.0.21.1 by @dependabot[bot] in https://github.com/solairen/pihole-backup/pull/12
+* Bump softprops/action-gh-release from 2 to 3 by @dependabot[bot] in https://github.com/solairen/pihole-backup/pull/11
+
+
+**Full Changelog**: https://github.com/solairen/pihole-backup/compare/1.0.1...1.1.0
