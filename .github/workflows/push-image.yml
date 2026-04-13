@@ -53,7 +53,7 @@ jobs:
             ghcr.io/solairen/pihole-backup:${{ env.VERSION }}
 
       - name: Create Release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           name: ${{ github.event.milestone.title }} (${{ steps.get_date.outputs.date }})
           tag_name: ${{ github.event.milestone.title }}
