@@ -31,3 +31,21 @@
 
 
 **Full Changelog**: https://github.com/solairen/pihole-backup/compare/1.0.1...1.1.0
+
+## 1.0.2
+
+## What's Changed
+* Bump dotnet-sdk from 10.0.201 to 10.0.202 by @dependabot[bot] in https://github.com/solairen/pihole-backup/pull/14
+* Bump AWSSDK.S3 from 4.0.21.1 to 4.0.21.2 by @dependabot[bot] in https://github.com/solairen/pihole-backup/pull/15
+* Bump dotnet-sdk from 10.0.202 to 10.0.203 by @dependabot[bot] in https://github.com/solairen/pihole-backup/pull/16
+* Bump AWSSDK.S3 from 4.0.21.2 to 4.0.22 by @dependabot[bot] in https://github.com/solairen/pihole-backup/pull/17
+* Bump Cronos from 0.12.0 to 0.13.0 by @dependabot[bot] in https://github.com/solairen/pihole-backup/pull/19
+* Bump AWSSDK.S3 from 4.0.22 to 4.0.22.1 by @dependabot[bot] in https://github.com/solairen/pihole-backup/pull/18
+* Bump AWSSDK.S3 from 4.0.22.1 to 4.0.22.2 by @dependabot[bot] in https://github.com/solairen/pihole-backup/pull/20
+* Bump AWSSDK.S3 from 4.0.22.2 to 4.0.23 by @dependabot[bot] in https://github.com/solairen/pihole-backup/pull/21
+* Bump AWSSDK.S3 from 4.0.23 to 4.0.23.2 by @dependabot[bot] in https://github.com/solairen/pihole-backup/pull/25
+* Bump Azure.Storage.Blobs from 12.27.0 to 12.28.0 by @dependabot[bot] in https://github.com/solairen/pihole-backup/pull/23
+* Bump dotnet-sdk from 10.0.203 to 10.0.300 by @dependabot[bot] in https://github.com/solairen/pihole-backup/pull/22
+
+
+**Full Changelog**: https://github.com/solairen/pihole-backup/compare/1.1.0...1.0.2
