@@ -49,3 +49,14 @@
 
 
 **Full Changelog**: https://github.com/solairen/pihole-backup/compare/1.1.0...1.0.2
+
+## 1.1.1
+
+## What's Changed
+* GH-59 [Bug]: Fix problem with update changelong by @solairen in https://github.com/solairen/pihole-backup/pull/60
+* GH-61 [Bug]: Fix problem with bug.yml by @solairen in https://github.com/solairen/pihole-backup/pull/62
+
+## New Contributors
+* @solairen made their first contribution in https://github.com/solairen/pihole-backup/pull/60
+
+**Full Changelog**: https://github.com/solairen/pihole-backup/compare/1.0.3...1.1.1
