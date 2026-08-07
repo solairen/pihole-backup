@@ -64,5 +64,5 @@ body:
       label: Running in Docker
       description: Is the application running inside the provided Docker image/container?
       options:
-        - Yes
-        - No
+        - "Yes"
+        - "No"
