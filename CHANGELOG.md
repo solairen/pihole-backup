@@ -60,3 +60,19 @@
 * @solairen made their first contribution in https://github.com/solairen/pihole-backup/pull/60
 
 **Full Changelog**: https://github.com/solairen/pihole-backup/compare/1.0.3...1.1.1
+
+## 1.1.2
+
+## What's Changed
+* Bump AWSSDK.S3 from 4.0.102 to 4.0.102.2 by @dependabot[bot] in https://github.com/solairen/pihole-backup/pull/65
+* Bump AWSSDK.S3 from 4.0.102.2 to 4.0.102.3 by @dependabot[bot] in https://github.com/solairen/pihole-backup/pull/66
+* Bump dotnet-sdk from 10.0.302 to 10.0.400 by @dependabot[bot] in https://github.com/solairen/pihole-backup/pull/64
+* Bump AWSSDK.S3 from 4.0.102.3 to 4.0.103 by @dependabot[bot] in https://github.com/solairen/pihole-backup/pull/71
+* Bump solairen/ruleset-trigger from 1.0.5 to 1.0.6 by @dependabot[bot] in https://github.com/solairen/pihole-backup/pull/69
+* Bump AWSSDK.S3 from 4.0.103 to 4.0.103.1 by @dependabot[bot] in https://github.com/solairen/pihole-backup/pull/72
+* Bump AWSSDK.S3 from 4.0.103.1 to 4.0.103.2 by @dependabot[bot] in https://github.com/solairen/pihole-backup/pull/74
+* Bump dotnet-sdk from 10.0.400 to 10.0.401 by @dependabot[bot] in https://github.com/solairen/pihole-backup/pull/73
+* Bump Azure.Storage.Blobs from 12.29.1 to 12.29.2 by @dependabot[bot] in https://github.com/solairen/pihole-backup/pull/68
+
+
+**Full Changelog**: https://github.com/solairen/pihole-backup/compare/1.1.1...1.1.2
