@@ -76,3 +76,12 @@
 
 
 **Full Changelog**: https://github.com/solairen/pihole-backup/compare/1.1.1...1.1.2
+
+## 1.1.3
+
+## What's Changed
+* Bump AWSSDK.S3 from 4.0.103.2 to 4.0.103.3 by @dependabot[bot] in https://github.com/solairen/pihole-backup/pull/75
+* Bump AWSSDK.S3 from 4.0.103.3 to 4.0.103.4 by @dependabot[bot] in https://github.com/solairen/pihole-backup/pull/76
+
+
+**Full Changelog**: https://github.com/solairen/pihole-backup/compare/1.1.2...1.1.3
