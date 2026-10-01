@@ -85,3 +85,11 @@
 
 
 **Full Changelog**: https://github.com/solairen/pihole-backup/compare/1.1.2...1.1.3
+
+## 1.1.4
+
+## What's Changed
+* Bump Azure.Storage.Blobs from 12.29.2 to 12.30.0 by @dependabot[bot] in https://github.com/solairen/pihole-backup/pull/78
+
+
+**Full Changelog**: https://github.com/solairen/pihole-backup/compare/1.1.3...1.1.4
