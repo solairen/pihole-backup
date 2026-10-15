@@ -101,3 +101,13 @@
 
 
 **Full Changelog**: https://github.com/solairen/pihole-backup/compare/1.1.4...1.1.5
+
+## 1.1.6
+
+## What's Changed
+* Bump Azure.Storage.Blobs from 12.30.0 to 12.30.1 by @dependabot[bot] in https://github.com/solairen/pihole-backup/pull/80
+* Bump AWSSDK.S3 from 4.0.104.1 to 4.0.104.2 by @dependabot[bot] in https://github.com/solairen/pihole-backup/pull/81
+* Bump AWSSDK.S3 from 4.0.104.2 to 4.0.104.4 by @dependabot[bot] in https://github.com/solairen/pihole-backup/pull/83
+
+
+**Full Changelog**: https://github.com/solairen/pihole-backup/compare/1.1.5...1.1.6
