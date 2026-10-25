@@ -111,3 +111,13 @@
 
 
 **Full Changelog**: https://github.com/solairen/pihole-backup/compare/1.1.5...1.1.6
+
+## 1.1.7
+
+## What's Changed
+* Bump RestSharp from 114.0.0 to 114.1.0 by @dependabot[bot] in https://github.com/solairen/pihole-backup/pull/87
+* Bump AWSSDK.S3 from 4.0.104.4 to 4.0.104.6 by @dependabot[bot] in https://github.com/solairen/pihole-backup/pull/86
+* Bump dotnet-sdk from 10.0.401 to 10.0.402 by @dependabot[bot] in https://github.com/solairen/pihole-backup/pull/84
+
+
+**Full Changelog**: https://github.com/solairen/pihole-backup/compare/1.1.6...1.1.7
