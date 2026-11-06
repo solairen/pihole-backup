@@ -121,3 +121,15 @@
 
 
 **Full Changelog**: https://github.com/solairen/pihole-backup/compare/1.1.6...1.1.7
+
+## 1.1.8
+
+## What's Changed
+* Bump AWSSDK.S3 from 4.0.104.6 to 4.0.104.7 by @dependabot[bot] in https://github.com/solairen/pihole-backup/pull/89
+* Bump dotnet-sdk from 10.0.402 to 10.0.403 by @dependabot[bot] in https://github.com/solairen/pihole-backup/pull/90
+* Bump AWSSDK.S3 from 4.0.104.7 to 4.0.104.9 by @dependabot[bot] in https://github.com/solairen/pihole-backup/pull/92
+* Bump AWSSDK.S3 from 4.0.104.9 to 4.0.104.10 by @dependabot[bot] in https://github.com/solairen/pihole-backup/pull/93
+* Bump docker/login-action from 4.6.0 to 4.7.0 by @dependabot[bot] in https://github.com/solairen/pihole-backup/pull/88
+
+
+**Full Changelog**: https://github.com/solairen/pihole-backup/compare/1.1.7...1.1.8
